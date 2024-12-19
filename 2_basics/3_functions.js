@@ -6,27 +6,40 @@
 // add(1,2)
 
 
-function calculateCartTotal(...num){
-    let sum = 0;
-    for(let i=0;i<num.length;i++)
-    {
-        sum += num[i];
-    }
-    return sum;
-}
+// function calculateCartTotal(...num){
+//     let sum = 0;
+//     for(let i=0;i<num.length;i++)
+//     {
+//         sum += num[i];
+//     }
+//     return sum;
+// }
 
-const total = calculateCartTotal(100,200,300)
-console.log(total);
+// const total = calculateCartTotal(100,200,300)
+// console.log(total);
 
-const user = {
-    username: "Meet",
-    expense: 500
-}
+// const user = {
+//     username: "Meet",
+//     expense: 500
+// }
 
-function handleObj(obj){
-    console.log(`Username is ${obj.username} and Expense is ${obj.expense}`);
+// function handleObj(obj){
+//     console.log(`Username is ${obj.username} and Expense is ${obj.expense}`);
     
-}
+// }
 
-handleObj(user)
+// handleObj(user)
 
+// function one(){
+//     const a = 100;
+
+//     function two(){
+//         const b = 200;
+//         console.log(a);
+//     }
+
+//     // console.log(b);
+
+//     two()
+// }
+// one()
