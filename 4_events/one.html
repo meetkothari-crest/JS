@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: white;">
+    <ul id="myUl">
+      <li id="li1">One</li>
+      <li id="li2">Two</li>
+      <li id="li3">Three</li>
+    </ul>
+  </body>
+
+  <script>
+
+    // 1
+    //  document.getElementById("myUl").addEventListener('click', function(e){
+    // console.log("Clicked on UL");
+    // }, false)
+
+    //  document.getElementById("li1").addEventListener('click', function(e){
+    // console.log("Clicked on Li1");
+    // }, false)
+    /*
+     Output (Bubbling Propogation)
+        Clicked on Li1
+        Clicked on UL
+    */
+
+
+    // 3rd Argument => Event Propogation
+    // event Bubbling -> default(false)
+    // event capturing -> true
+
+    // 2
+    //  document.getElementById("myUl").addEventListener('click', function(e){
+    // console.log("Clicked on UL");
+    // }, true)
+
+    //  document.getElementById("li1").addEventListener('click', function(e){
+    // console.log("Clicked on Li1");
+    // }, true)
+    /*
+     Output (Bubbling Propogation)
+        Clicked on UL
+        Clicked on Li1
+    */
+
+    // 3
+    //  document.getElementById("myUl").addEventListener('click', function(e){
+    // console.log("Clicked on UL");
+    // }, false)
+
+    //  document.getElementById("li1").addEventListener('click', function(e){
+    // console.log("Clicked on Li1");
+    // e.stopPropagation()
+    // }, false)
+
+    // Output
+    // Clicked on Li1
+
+    // remove li when we click on it
+
+    document.querySelector('#myUl').addEventListener('click', (e) => {
+        console.log(e.target);
+        e.target.remove()
+    })
+    
+  </script>
+</html>

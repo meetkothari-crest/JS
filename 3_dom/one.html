@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM Learning <span style="display: none"> This is Span Content</span></h1>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, maxime.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, maxime.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, maxime.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul class="ulNumber">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+
+    </div>
+</body>
+</html>
+
+
+<!-- 
+
+document.getElementById("id") 
+document.querySelector('h2') // tag => tag
+document.querySelector('#id') // id => #id
+document.querySelector('.className') // className => .className
+
+
+getElementsByClassName will return an HTMLCollection
+querySelectorAll will return a Nodelist
+
+===== NodeList =====
+==> NodeList is a list of nodes. A node is any individual element in the DOM tree. This could be elements, attributes, texts, comments, and so on.
+
+
+===== Diff between NodeList and Array =====
+==> Arrays are a built-in data structure in JavaScript that can be used in any context, while NodeLists are specific to the DOM and can only be used in the context of interacting with an HTML or XML document.
+==> Arrays have many built-in methods, while NodeLists don’t have many built-in methods but we can convert them to array to use the array methods.
+
+===== Diff between NodeList and HTMLCollection
+==> https://www.freecodecamp.org/news/dom-manipulation-htmlcollection-vs-nodelist/
+
+
+-->
+
+
+<!-- 
+
+document.getElementById("title")
+<h1 id=​"title" class=​"heading">​DOM Learning​</h1>​
+
+document.getElementById("title").innerHTML
+'DOM Learning'
+
+document.getElementById("title").id
+'title'
+
+document.getElementById("title").class
+undefined
+
+document.getElementById("title").className
+'heading' 
+
+
+const title = document.getElementById("title")
+
+title.textContent // return all content
+'DOM Learning  This is Span Content'
+
+title.innerText // return only visible content
+'DOM Learning'
+
+title.innerHTML // Returns content with tags
+'DOM Learning <span style="display: none;"> This is Span Content</span>'
+
+
+const myul = document.querySelector('ul')
+
+const turnGreen = myul.querySelector('li')
+turnGreen
+<li style=​"background-color:​ green;​">​::marker​"One"</li>​
+
+turnGreen.style.backgroundColor="green"
+'green'
+
+turnGreen.style.padding="10px"
+'10px'
+
+const temp = document.querySelectorAll('li')
+temp
+NodeList(3) [li, li, li]
+
+temp.style.color = "green' // becuase temp is Nodelist not Array
+
+temp[0].style.color = "red" // We can use index instead of whole nodelist
+'red'
+
+
+-->
