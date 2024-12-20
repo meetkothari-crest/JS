@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="insert"></div>
+</body>
+<script>
+    const ins = document.querySelector('#insert')
+
+    window.addEventListener('keydown', (e)=>{
+        ins.innerHTML = `
+        key :- ${e.key === " " ? "Space" : e.key},
+        keyCode :- ${e.keyCode},
+        code :- ${e.code}
+        `
+    })
+</script>
+</html>
